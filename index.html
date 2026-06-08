@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustainHub-Desarrollo-Sustentable</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🌱 SustainHub
+            </div>
+
+            <ul class="nav-links">
+
+    <li><a href="#inicio">Inicio</a></li>
+
+    <li><a href="#simulador">Simulador</a></li>
+
+    <li><a href="#evaluador">Evaluador</a></li>
+
+    <li><a href="#ecocharge">EcoCharge</a></li>
+
+    <li><a href="#biblioteca">Biblioteca</a></li>
+
+    <li><a href="#estadisticas">Estadísticas</a></li>
+
+    <li><a href="#faq">FAQ</a></li>
+
+</ul>
+
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>SustainHub</h1>
+
+            <p>
+                Innovación, evaluación y educación para un futuro sustentable.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button>
+                    Evaluar Proyecto
+                </button>
+
+                <button class="secondary">
+                    Explorar Recursos
+                </button>
+
+            </div>
+
+            <!-- ESTADÍSTICAS HERO -->
+
+            <div class="stats-row">
+
+                <div class="hero-stat">
+                    <h2 class="counter" data-target="350">0</h2>
+                    <p>kWh Ahorrados</p>
+                </div>
+
+                <div class="hero-stat">
+                    <h2 class="counter" data-target="1">0</h2>
+                    <p>Proyectos Evaluados</p>
+                </div>
+
+                <div class="hero-stat">
+                    <h2 class="counter" data-target="1200">0</h2>
+                    <p>kg CO₂ Reducidos</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DASHBOARD -->
+
+    <section class="dashboard">
+
+        <div class="section-title">
+            <h2>Explora SustainHub</h2>
+            <p>
+                SustainHub es una plataforma diseñada para promover el desarrollo
+                sustentable mediante herramientas interactivas, simuladores,
+                evaluaciones y recursos educativos.
+            </p>
+        </div>
+
+        <div class="dashboard-grid">
+
+            <div class="dashboard-card">
+                <div class="card-icon">⚡</div>
+                <h3>EcoCharge</h3>
+                <p>
+                    Descubre cómo reducir el consumo fantasma de energía.
+                </p>
+                <button>Explorar</button>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-icon">📊</div>
+                <h3>Evaluador</h3>
+                <p>
+                    Analiza proyectos sustentables mediante indicadores.
+                </p>
+                <button>Evaluar</button>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-icon">🏠</div>
+                <h3>Simulador Energético</h3>
+                <p>
+                    Calcula el consumo energético de una vivienda.
+                </p>
+                <button>Simular</button>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-icon">📚</div>
+                <h3>Biblioteca</h3>
+                <p>
+                    Consulta recursos y materiales educativos.
+                </p>
+                <button>Abrir</button>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-icon">💡</div>
+                <h3>Banco de Ideas</h3>
+                <p>
+                    Explora proyectos innovadores y sustentables.
+                </p>
+                <button>Ver Ideas</button>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-icon">📈</div>
+                <h3>Estadísticas</h3>
+                <p>
+                    Visualiza datos y tendencias ambientales.
+                </p>
+                <button>Ver Datos</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="ecocharge" id="ecocharge">
+
+        <div class="ecocharge-container">
+
+            <div class="ecocharge-info">
+
+                <span class="badge">
+                    Proyecto Destacado
+                </span>
+
+                <h2>EcoCharge</h2>
+
+                <h3>
+                    Eliminando el consumo fantasma
+                </h3>
+
+                <p>
+                    Miles de hogares desperdician energía todos los días debido a dispositivos conectados que siguen
+                    consumiendo electricidad incluso cuando no están siendo utilizados.
+                </p>
+
+                <ul>
+
+                    <li>✔ Reduce el desperdicio energético</li>
+
+                    <li>✔ Disminuye emisiones de CO₂</li>
+
+                    <li>✔ Reduce costos eléctricos</li>
+
+                    <li>✔ Fácil implementación doméstica</li>
+
+                </ul>
+
+            </div>
+
+            <div class="ecocharge-calculator">
+
+                <h3>Calculadora EcoCharge</h3>
+
+                <label>
+                    Número de dispositivos
+                </label>
+
+                <input type="number" id="devices" value="10">
+
+                <label>
+                    Consumo fantasma por dispositivo (Watts)
+                </label>
+
+                <input type="number" id="watts" value="5">
+
+                <button onclick="calculateEcoCharge()">
+                    Calcular Impacto
+                </button>
+
+                <div id="eco-results">
+
+                    <p>
+                        Consumo anual:
+                        <span id="kwhResult">0</span> kWh
+                    </p>
+
+                    <p>
+                        Costo estimado:
+                        $<span id="moneyResult">0</span> MXN
+                    </p>
+
+                    <p>
+                        CO₂ generado:
+                        <span id="co2Result">0</span> kg
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="energy-simulator" id="simulador">
+
+        <div class="section-title">
+            <h2>Simulador Energético</h2>
+            <p>
+                Estima el consumo energético de una vivienda.
+            </p>
+        </div>
+
+        <div class="simulator-container">
+
+            <div class="simulator-form">
+
+                <label>Horas diarias de Refrigerador</label>
+                <input type="number" id="fridge" value="24">
+
+                <label>Horas diarias de TV</label>
+                <input type="number" id="tv" value="4">
+
+                <label>Horas diarias de Laptop</label>
+                <input type="number" id="laptop" value="5">
+
+                <label>Horas diarias de Microondas</label>
+                <input type="number" id="microwave" value="1">
+
+                <label>Horas diarias de Lavadora</label>
+                <input type="number" id="washer" value="1">
+
+                <label>Horas diarias de Iluminación LED</label>
+                <input type="number" id="lights" value="6">
+
+                <button onclick="calculateEnergy()">
+                    Calcular Consumo
+                </button>
+
+            </div>
+
+            <div class="simulator-results">
+
+                <h3>Resultados</h3>
+
+                <div class="result-card">
+                    <h4>Consumo Mensual</h4>
+                    <p id="energyResult">0 kWh</p>
+                </div>
+
+                <div class="result-card">
+                    <h4>Costo Aproximado</h4>
+                    <p id="costResult">$0 MXN</p>
+                </div>
+
+                <div class="result-card">
+                    <h4>CO₂ Estimado</h4>
+                    <p id="co2EnergyResult">0 kg</p>
+                </div>
+
+                <div class="result-card">
+                    <h4>Nivel Energético</h4>
+                    <p id="efficiencyResult">Sin evaluar</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+   <section class="library" id="biblioteca">
+
+        <div class="section-title">
+            <h2>Biblioteca Sustentable</h2>
+            <p>
+                Recursos educativos para aprender sobre desarrollo sustentable.
+            </p>
+        </div>
+
+        <div class="library-search">
+
+            <input type="text" id="searchLibrary" placeholder="Buscar recurso...">
+
+        </div>
+
+        <div class="library-grid">
+
+            <div class="library-card">
+
+                <h3>☀️ Energía Solar</h3>
+
+                <p>
+                    Conoce cómo funcionan los paneles solares y sus beneficios.
+                </p>
+
+            </div>
+
+            <div class="library-card">
+
+                <h3>💧 Gestión del Agua</h3>
+
+                <p>
+                    Estrategias para reducir el desperdicio y reutilizar recursos.
+                </p>
+
+            </div>
+
+            <div class="library-card">
+
+                <h3>♻️ Economía Circular</h3>
+
+                <p>
+                    Aprende cómo reducir residuos mediante reutilización y reciclaje.
+                </p>
+
+            </div>
+
+            <div class="library-card">
+
+                <h3>🌿 Agricultura Sustentable</h3>
+
+                <p>
+                    Técnicas agrícolas con menor impacto ambiental.
+                </p>
+
+            </div>
+
+            <div class="library-card">
+
+                <h3>🚲 Movilidad Verde</h3>
+
+                <p>
+                    Transporte sostenible y reducción de emisiones.
+                </p>
+
+            </div>
+
+            <div class="library-card">
+
+                <h3>🏢 Ciudades Inteligentes</h3>
+
+                <p>
+                    Innovaciones tecnológicas para ciudades más sustentables.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="ideas">
+
+        <div class="section-title">
+            <h2>Banco de Ideas Sustentables</h2>
+            <p>
+                Explora proyectos innovadores para mejorar el desarrollo sustentable.
+            </p>
+        </div>
+
+        <div class="filter-buttons">
+
+            <button onclick="filterIdeas('all')">Todas</button>
+            <button onclick="filterIdeas('energia')">Energía</button>
+            <button onclick="filterIdeas('agua')">Agua</button>
+            <button onclick="filterIdeas('residuos')">Residuos</button>
+
+        </div>
+
+        <div class="ideas-grid">
+
+            <div class="idea-card energia">
+                <h3>⚡ EcoCharge</h3>
+                <p>Elimina el consumo fantasma de dispositivos electrónicos.</p>
+
+                <div class="idea-info">
+                    <span>Impacto: Alto</span>
+                    <span>Costo: Bajo</span>
+                    <span>Dificultad: Baja</span>
+                </div>
+            </div>
+
+            <div class="idea-card agua">
+                <h3>💧 Recolección de Agua</h3>
+                <p>Aprovechamiento del agua para actividades secundarias.</p>
+
+                <div class="idea-info">
+                    <span>Impacto: Alto</span>
+                    <span>Costo: Medio</span>
+                    <span>Dificultad: Media</span>
+                </div>
+            </div>
+
+            <div class="idea-card energia">
+                <h3>☀️ Paneles Solares</h3>
+                <p>Generación de energía limpia y renovable.</p>
+
+                <div class="idea-info">
+                    <span>Impacto: Muy Alto</span>
+                    <span>Costo: Alto</span>
+                    <span>Dificultad: Media</span>
+                </div>
+            </div>
+
+            <div class="idea-card residuos">
+                <h3>♻️ Compostaje</h3>
+                <p>Transformación de residuos orgánicos en fertilizante.</p>
+
+                <div class="idea-info">
+                    <span>Impacto: Medio</span>
+                    <span>Costo: Bajo</span>
+                    <span>Dificultad: Baja</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="evaluator" id="evaluador">
+
+    <div class="section-title">
+
+        <h2>Evaluador Profesional de Sustentabilidad</h2>
+
+        <p>
+            Evalúa proyectos mediante indicadores ambientales,
+            sociales y económicos.
+        </p>
+
+    </div>
+
+    <div class="evaluator-container">
+
+        <div class="evaluator-form">
+
+            <h3>Materiales</h3>
+
+            <input type="number" id="materialTotal"
+            placeholder="Material total (kg)">
+
+            <input type="number" id="materialReciclado"
+            placeholder="Material reciclado (kg)">
+
+            <h3>Energía</h3>
+
+            <input type="number" id="energiaTotal"
+            placeholder="Consumo anual (kWh)">
+
+            <input type="number" id="energiaRenovable"
+            placeholder="Energía renovable (kWh)">
+
+            <h3>Agua</h3>
+
+            <input type="number" id="aguaTotal"
+            placeholder="Agua utilizada (m³)">
+
+            <input type="number" id="aguaReutilizada"
+            placeholder="Agua reutilizada (m³)">
+
+            <h3>Carbono</h3>
+
+            <input type="number" id="co2Total"
+            placeholder="Emisiones (tCO₂e)">
+
+            <input type="number" id="produccion"
+            placeholder="Producción anual">
+
+            <h3>Residuos</h3>
+
+            <input type="number" id="residuosTotal"
+            placeholder="Residuos generados (kg)">
+
+            <input type="number" id="residuosReciclados"
+            placeholder="Residuos reciclados (kg)">
+
+            <h3>Social</h3>
+
+            <input type="number" id="empleosTotal"
+            placeholder="Empleos totales">
+
+            <input type="number" id="empleosLocales"
+            placeholder="Empleos locales">
+
+            <h3>Económico</h3>
+
+            <input type="number" id="costo"
+            placeholder="Costo ($)">
+
+            <input type="number" id="ingreso"
+            placeholder="Ingreso ($)">
+
+            <h3>Biodiversidad</h3>
+
+            <input type="number" id="areaAfectada"
+            placeholder="Área afectada (m²)">
+
+            <input type="number" id="areaRestaurada"
+            placeholder="Área restaurada (m²)">
+
+            <h3>Circularidad</h3>
+
+            <input type="number" id="materialRecuperable"
+            placeholder="Material recuperable (kg)">
+
+            <button onclick="evaluateProject()">
+                Evaluar Proyecto
+            </button>
+
+        </div>
+
+        <div class="evaluator-results">
+
+            <h2>EcoScore</h2>
+
+            <h1 id="ecoScore">
+                0
+            </h1>
+
+            <div class="progress-bar">
+
+                <div id="progressFill">
+
+                </div>
+
+            </div>
+
+            <p id="evaluationText">
+
+                Esperando evaluación...
+
+            </p>
+
+            <div id="recommendations">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="statistics" id="estadisticas">
+
+        <div class="section-title">
+            <h2>Dashboard de Estadísticas</h2>
+
+            <p>
+                Visualización de indicadores relacionados con el desarrollo sustentable.
+            </p>
+        </div>
+
+        <div class="charts-grid">
+
+            <div class="chart-card">
+                <h3>Consumo Energético</h3>
+                <canvas id="energyChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3>Reducción de CO₂</h3>
+                <canvas id="co2Chart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3>Gestión del Agua</h3>
+                <canvas id="waterChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3>Residuos Reciclados</h3>
+                <canvas id="recycleChart"></canvas>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="faq" id="faq">
+
+        <div class="section-title">
+            <h2>Preguntas Frecuentes</h2>
+            <p>
+                Respuestas a las dudas más comunes sobre SustainHub y EcoCharge.
+            </p>
+        </div>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    ¿Qué es SustainHub?
+                </button>
+
+                <div class="faq-answer">
+                    SustainHub es una plataforma educativa e interactiva enfocada en el desarrollo sustentable.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    ¿Qué es EcoCharge?
+                </button>
+
+                <div class="faq-answer">
+                    EcoCharge es una propuesta que busca reducir el consumo fantasma de energía en hogares y oficinas.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    ¿Qué es el consumo fantasma?
+                </button>
+
+                <div class="faq-answer">
+                    Es la energía consumida por aparatos conectados incluso cuando parecen estar apagados.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    ¿Cómo funciona el Evaluador?
+                </button>
+
+                <div class="faq-answer">
+                    Analiza características sustentables de un proyecto y genera un EcoScore.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 SustainHub | ESIA TICOMAN - DESARROLLO SUSTENTABLE
+        </p>
+
+    </footer>
+
+    <script src="js/ecocharge.js"></script>
+    <script src="js/energia.js"></script>
+    <script src="js/library.js"></script>
+    <script src="js/ideas.js"></script>
+    <script src="js/evaluator.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/counters.js"></script>
+</body>
+
+</html>
